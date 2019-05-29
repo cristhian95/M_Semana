@@ -14,14 +14,21 @@ require([
           container: "viewDiv",
           map: map,
           center: [-73.783892,2.8894434],
-          zoom: 7
-        });
+          zoom: 7,
+          popup: {
+            dockEnabled: true,
+            dockOptions: {
+              // Disables the dock button from the popup
+              buttonEnabled: false,
+              // Ignore the default sizes that trigger responsive docking
+              breakpoint: false
+            }},
+         });
 
         const layer = new FeatureLayer({
          url: "https://services.arcgis.com/8DAUcrpQcpyLMznu/arcgis/rest/services/Artistas/FeatureServer/0"
       });
       map.add(layer);
-
       var template = {
             // autocasts as new PopupTemplate()
             title: "{Nombre}",
