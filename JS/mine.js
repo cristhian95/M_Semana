@@ -46,7 +46,27 @@ require([
                   },
 
                 ]
+              },
+              {
+                // You can set a media element within the popup as well. This
+                // can be either an image or a chart. You specify this within
+                // the mediaInfos. The following creates a pie chart in addition
+                // to two separate images. The chart is also set up to work with
+                // related tables. Similar to text elements, media can only be set within the content.
+                type: "media", // MediaContentElement
+                mediaInfos: [
+                  {
+                    title: "<b>Imagen</b>",
+                    type: "image",
+                      caption: "Imagen del artista",
+                    value: {
+                      sourceURL:
+                        "https://www.sunset.com/wp-content/uploads/96006df453533f4c982212b8cc7882f5-800x0-c-default.jpg"
+                    }
+                  },
+                ]
               }
+
             ]
           }
 
