@@ -7,7 +7,7 @@ require([
         ], function(Map, MapView,FeatureLayer,  popupTemplate) {
 
         var map = new Map({
-          basemap: "topo-vector"
+          basemap: "streets-night-vector"
         });
 
         var view = new MapView({
@@ -27,9 +27,6 @@ require([
             title: "{Nombre}",
             content: [
               {
-                // It is also possible to set the fieldInfos outside of the content
-                // directly in the popupTemplate. If no fieldInfos is specifically set
-                // in the content, it defaults to whatever may be set within the popupTemplate.
                 type: "fields",
                 fieldInfos: [
                   {
@@ -48,20 +45,14 @@ require([
                 ]
               },
               {
-                // You can set a media element within the popup as well. This
-                // can be either an image or a chart. You specify this within
-                // the mediaInfos. The following creates a pie chart in addition
-                // to two separate images. The chart is also set up to work with
-                // related tables. Similar to text elements, media can only be set within the content.
-                type: "media", // MediaContentElement
+                type: "media",
                 mediaInfos: [
                   {
-                    title: "<b>Imagen</b>",
+                    title: "Imagen",
                     type: "image",
                       caption: "Imagen del artista",
                     value: {
-                      sourceURL:
-                        "https://www.sunset.com/wp-content/uploads/96006df453533f4c982212b8cc7882f5-800x0-c-default.jpg"
+                      sourceURL:"{imagen}"
                     }
                   },
                 ]
