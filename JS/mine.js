@@ -14,7 +14,7 @@ require([
           container: "viewDiv",
           map: map,
           center: [-73.783892,2.8894434],
-          zoom: 7,
+          zoom: 5,
           popup: {
             dockEnabled: true,
             dockOptions: {
